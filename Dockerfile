@@ -2,6 +2,10 @@ FROM ubuntu:16.04
 
 MAINTAINER didstopia
 
+
+
+RUN apt-get clean && apt-get -y update && apt-get install -y locales && locale-gen en_US.UTF-8
+
 # Setup the locales
 RUN locale-gen en_US.UTF-8  
 ENV LANG en_US.UTF-8  
